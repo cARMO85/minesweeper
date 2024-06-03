@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Slot
+comment0.text=\n\ Slot\n\ This\ class\ handles\ the\ state\ of\ each\ slot\ in\ the\ game.\ Extending\ observable\ in\ preparation\ for\ the\ addition\ of\ a\ GUI.\n\ @author\ Lauren\ Scott\n\ @version\ Student\ Sample\ Code\n
+comment1.params=col\ row\ status
+comment1.target=Slot(int,\ int,\ java.lang.String)
+comment1.text=\n\ Constructor\ of\ the\ class\ slot\ when\ importing\ the\ level\ file\n\ This\ creates\ the\ slot\ and\ denotes\ where\ it\ is\ placed\ in\ the\ game\ board.\n\ \n\ @param\ col\ -\ the\ slot's\ column\ number\n\ @param\ row\ -\ the\ slot's\ row\ number\n\ @param\ number\ -\ the\ number\ that\ is\ in\ that\ cell\n\ @param\ fillable\ -\ whether\ that\ cell\ can\ be\ filled\ \ by\ the\ user,\ cells\ in\ the\ level\ file\ that\ already\ have\ numbers\ should\ not\ be\ changed.\n
+comment2.params=
+comment2.target=java.lang.String\ getState()
+comment2.text=\n\ getState\n\ This\ provides\ the\ current\ state\ of\ the\ slot\n\ @return\ the\ current\ state\ of\ the\ slot\n
+comment3.params=state
+comment3.target=void\ setState(java.lang.String)
+comment3.text=\n\ setState\n\ This\ method\ sets\ the\ state\ of\ the\ slot\n\ @param\ state\ -\ the\ new\ state\ of\ the\ slot\n
+numComments=4
