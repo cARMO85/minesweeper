@@ -73,9 +73,9 @@ public class Assign {
             }
 
             // Directly set the game state
-            game.setGameBoard(gameBoard);
-            game.setPlayerBoard(playerBoard);
-
+            setGameBoard(gameBoard);
+            setPlayerBoard(playerBoard);
+            
             System.out.println("Game loaded successfully.");
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred while loading the game.");
@@ -102,15 +102,9 @@ public class Assign {
     /**
      * Method to assign a move and save it to history
      */
-    public String assignMove(String row, String col, String guess) {
-        int enteredRow = Integer.parseInt(row);
-        int enteredCol = Integer.parseInt(col);
-        String prevState = game.getCellState(enteredRow, enteredCol);
-
-        // Save the previous state and the new move to history
-        moveHistory.add(enteredRow + "," + enteredCol + "," + prevState + "," + guess);
-
-        return game.makeMove(row, col, guess);
+    public void assignMove(String row, String col, String guess) {
+        game.makeMove(row, col, guess);
+        moveHistory.add(row + "," + col + "," + guess); // Save move to history
     }
 
     /**
@@ -122,11 +116,8 @@ public class Assign {
             String[] parts = lastMove.split(",");
             int row = Integer.parseInt(parts[0]);
             int col = Integer.parseInt(parts[1]);
-            String prevState = parts[2];
-
-            // Restore the previous state
-            game.getMoves()[row][col].setState(prevState);
-
+            // Undo the move (e.g., set it back to the initial state or a previous state)
+            game.getMoves()[row][col].setState("?"); // Assuming "?" is the initial state
             System.out.println("Last move undone.");
         } else {
             System.out.println("No moves to undo.");

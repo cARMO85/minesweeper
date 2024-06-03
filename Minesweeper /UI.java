@@ -10,17 +10,10 @@ public class UI {
      * Constructor for the class UI
      */
     public UI() {
-        this(new Minesweeper(), new Scanner(System.in));
-    }
-
-    /**
-     * Constructor for the class UI with Minesweeper and Scanner
-     */
-    public UI(Minesweeper game, Scanner scanner) {
-        this.thegame = game;
-        this.assign = new Assign(game); // Initialize Assign with the game instance
-        this.reader = scanner;
-        this.menuChoice = "";
+        thegame = new Minesweeper();
+        assign = new Assign(thegame); // Initialize Assign with the game instance
+        reader = new Scanner(System.in);
+        menuChoice = "";
         while (!menuChoice.equalsIgnoreCase("Q") && thegame.checkWin().equals("continue")) {
             displayGame();
             menu();
@@ -84,9 +77,6 @@ public class UI {
      * @return the choice the user has selected
      */
     public String getChoice() {
-        if (!reader.hasNext()) {
-            return "Q";
-        }
         String choice = reader.next();
         if (choice.equalsIgnoreCase("M") || choice.equalsIgnoreCase("G")) {
             handleMove(choice);
@@ -104,32 +94,22 @@ public class UI {
         return choice;
     }
 
-    public void handleMove(String choice) {
+    private void handleMove(String choice) {
         int row = -1, col = -1;
         boolean validInput = false;
         while (!validInput) {
             try {
                 System.out.print("Which row is the cell you wish to " + (choice.equalsIgnoreCase("M") ? "flag" : "guess") + "?  ");
-                if (!reader.hasNextInt()) {
-                    System.out.println("Invalid input. Please enter numeric values for row and column.");
-                    reader.next(); // Clear invalid input
-                    continue;
-                }
-                row = reader.nextInt();
+                row = Integer.parseInt(reader.next());
                 System.out.print("Which column is the cell you wish to " + (choice.equalsIgnoreCase("M") ? "flag" : "guess") + "?  ");
-                if (!reader.hasNextInt()) {
-                    System.out.println("Invalid input. Please enter numeric values for row and column.");
-                    reader.next(); // Clear invalid input
-                    continue;
-                }
-                col = reader.nextInt();
+                col = Integer.parseInt(reader.next());
                 if (row >= 0 && row < thegame.getGameSize() && col >= 0 && col < thegame.getGameSize()) {
                     validInput = true;
                 } else {
                     System.out.println("Invalid input. Please enter a valid row and column within the game board.");
                 }
             } catch (NumberFormatException e) {
-                System.out.println(e.getMessage());
+                System.out.println("Invalid input. Please enter numeric values for row and column.");
                 reader.next(); // Clear invalid input
             }
         }
