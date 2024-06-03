@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Assign {
     private Minesweeper game;
-    private ArrayList<String> moveHistory; // ArrayList to keep track of moves
+    private ArrayList<String[]> moveHistory; // ArrayList to keep track of moves and their results
 
     /**
      * Constructor for Assign class.
@@ -73,9 +73,9 @@ public class Assign {
             }
 
             // Directly set the game state
-            setGameBoard(gameBoard);
-            setPlayerBoard(playerBoard);
-            
+            game.setGameBoard(gameBoard);
+            game.setPlayerBoard(playerBoard);
+
             System.out.println("Game loaded successfully.");
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred while loading the game.");
@@ -83,28 +83,19 @@ public class Assign {
         }
     }
 
-    private void setGameBoard(String[][] gameBoard) {
-        for (int i = 0; i < game.getGameSize(); i++) {
-            for (int j = 0; j < game.getGameSize(); j++) {
-                game.makeMove(String.valueOf(i), String.valueOf(j), gameBoard[i][j]);
-            }
-        }
-    }
-
-    private void setPlayerBoard(Slot[][] playerBoard) {
-        for (int i = 0; i < game.getGameSize(); i++) {
-            for (int j = 0; j < game.getGameSize(); j++) {
-                game.getMoves()[i][j] = playerBoard[i][j];
-            }
-        }
-    }
-
     /**
      * Method to assign a move and save it to history
      */
-    public void assignMove(String row, String col, String guess) {
-        game.makeMove(row, col, guess);
-        moveHistory.add(row + "," + col + "," + guess); // Save move to history
+    public String assignMove(String row, String col, String guess) {
+        int enteredRow = Integer.parseInt(row);
+        int enteredCol = Integer.parseInt(col);
+        String prevState = game.getCellState(enteredRow, enteredCol);
+
+        // Save the previous state and the new move to history
+        String result = game.makeMove(row, col, guess);
+        moveHistory.add(new String[]{row, col, prevState, guess});
+
+        return result;
     }
 
     /**
@@ -112,12 +103,14 @@ public class Assign {
      */
     public void undoMove() {
         if (!moveHistory.isEmpty()) {
-            String lastMove = moveHistory.remove(moveHistory.size() - 1);
-            String[] parts = lastMove.split(",");
-            int row = Integer.parseInt(parts[0]);
-            int col = Integer.parseInt(parts[1]);
-            // Undo the move (e.g., set it back to the initial state or a previous state)
-            game.getMoves()[row][col].setState("?"); // Assuming "?" is the initial state
+            String[] lastMove = moveHistory.remove(moveHistory.size() - 1);
+            int row = Integer.parseInt(lastMove[0]);
+            int col = Integer.parseInt(lastMove[1]);
+            String prevState = lastMove[2];
+
+            // Restore the previous state
+            game.getMoves()[row][col].setState(prevState);
+
             System.out.println("Last move undone.");
         } else {
             System.out.println("No moves to undo.");

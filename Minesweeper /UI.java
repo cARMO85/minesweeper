@@ -110,10 +110,10 @@ public class UI {
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter numeric values for row and column.");
-                reader.next(); // Clear invalid input
             }
         }
-        System.out.print(thegame.makeMove(String.valueOf(row), String.valueOf(col), choice));
+        String result = assign.assignMove(String.valueOf(row), String.valueOf(col), choice);
+        System.out.println(result);
     }
 
     /**

@@ -129,29 +129,22 @@ public class MinesweeperTest {
     @Test
     public void testCheckWinWon() {
         game.readLevelFile();
-        // Simulate moves that would result in winning the game
-        game.makeMove("0", "1", "G");
-        game.makeMove("0", "2", "G");
-        game.makeMove("0", "3", "G");
-        game.makeMove("1", "0", "G");
-        game.makeMove("1", "1", "G");
-        game.makeMove("1", "2", "G");
-        game.makeMove("1", "3", "G");
-        game.makeMove("2", "0", "G");
-        game.makeMove("2", "1", "G");
-        game.makeMove("2", "2", "G");
-        game.makeMove("2", "3", "G");
-        game.makeMove("3", "0", "G");
-        game.makeMove("3", "1", "G");
-        game.makeMove("3", "2", "G");
-        game.makeMove("3", "3", "G");
-        game.makeMove("4", "1", "G");
-        game.makeMove("4", "2", "G");
-        game.makeMove("4", "3", "G");
-        // Final move to ensure win
-        game.makeMove("1", "4", "G");
+        // Flag all mines correctly
+        game.makeMove("0", "0", "M");
+        game.makeMove("0", "4", "M");
+        game.makeMove("4", "0", "M");
+        game.makeMove("4", "4", "M");
+        // Guess all non-mine cells
+        for (int row = 0; row < game.getGameSize(); row++) {
+            for (int col = 0; col < game.getGameSize(); col++) {
+                if (!game.getGameBoard()[row][col].equals("M")) {
+                    game.makeMove(String.valueOf(row), String.valueOf(col), "G");
+                }
+            }
+        }
         assertEquals("won", game.checkWin());
     }
+
 
     /**
      * Tests the game state when all lives are lost.

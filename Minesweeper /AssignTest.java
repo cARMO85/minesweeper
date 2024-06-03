@@ -15,17 +15,17 @@ public class AssignTest {
     @Test
     public void testAssignValidMove() {
         assign.assignMove("0", "0", "G");
-        assertEquals("G", game.getCellState(0, 0));
+        assertEquals("1", game.getCellState(0, 0));
     }
 
     @Test
     public void testAssignInvalidMove() {
         assign.assignMove("0", "0", "G");
-        assertEquals("G", game.getCellState(0, 0));
+        assertEquals("1", game.getCellState(0, 0));
 
         // Attempting to place a mine on an already guessed square
         assign.assignMove("0", "0", "M");
-        assertEquals("G", game.getCellState(0, 0)); // State should remain "G"
+        assertEquals("1", game.getCellState(0, 0)); // State should remain "1"
     }
 
     @Test
@@ -83,15 +83,14 @@ public class AssignTest {
         assertEquals("M", game.getCellState(0, 0)); // Should indicate mine and reduce lives
 
         // Check lives are reduced
-        // Assuming there is a method to get lives, add it to Minesweeper and uncomment the next line
-        // assertEquals(2, game.getLives());
+        assertEquals(2, game.getLives());
     }
 
     @Test
     public void testAssignUndoMove() {
         // Make a move and then undo it
         assign.assignMove("0", "0", "G");
-        assertEquals("G", game.getCellState(0, 0));
+        assertEquals("1", game.getCellState(0, 0));
 
         // Undo the move
         assign.undoMove();
@@ -122,7 +121,7 @@ public class AssignTest {
 
         // Load the game
         assign.loadGame("saved_game.txt");
-        assertEquals("G", game.getCellState(0, 0));
+        assertEquals("1", game.getCellState(0, 0));
         assertEquals("M", game.getCellState(0, 1));
     }
 }
