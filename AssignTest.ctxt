@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=AssignTest
+comment0.text=\n\ The\ test\ class\ AssignTest.\n\n\ @version\ 2.0\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\ (Called\ before\ every\ test\ case\ method.)\n
+comment2.params=
+comment2.target=void\ testAssignConstructor()
+comment2.text=\n\ UNIT-013\n\ Test\ Assign\ constructor\n\ Ensures\ the\ Assign\ constructor\ correctly\ assigns\ a\ move\ in\ the\ Minesweeper\ game.\n
+comment3.params=
+comment3.target=void\ testAssignMove()
+comment3.text=\n\ UNIT-014\n\ Test\ Assign\ move\n\ Ensures\ the\ assignMove\ method\ correctly\ updates\ the\ state\ of\ the\ slot.\n
+comment4.params=
+comment4.target=void\ testAssignIntegrationWithMinesweeper()
+comment4.text=\n\ UNIT-019\n\ Test\ Assign\ integration\ with\ Minesweeper\n\ Ensures\ that\ the\ Assign\ class\ properly\ integrates\ with\ the\ Minesweeper\ game.\n
+comment5.params=
+comment5.target=void\ testSetState()
+comment5.text=\n\ UNIT-031\n\ Test\ Assign\ state\ setting\n\ Ensures\ that\ the\ state\ of\ a\ slot\ can\ be\ set\ correctly\ through\ the\ Assign\ class.\n
+comment6.params=
+comment6.target=void\ testGetRowAndCol()
+comment6.text=\n\ Test\ the\ getRow\ and\ getCol\ methods\n\ Ensures\ that\ the\ row\ and\ column\ values\ can\ be\ retrieved\ correctly.\n
+numComments=7

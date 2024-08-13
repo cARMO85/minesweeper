@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=MinesweeperGUI
+comment0.text=\n\ The\ MinesweeperGUI\ class\ represents\ the\ main\ graphical\ user\ interface\ for\ the\ Minesweeper\ game.\n\ It\ observes\ the\ Minesweeper\ game\ state\ and\ updates\ the\ UI\ accordingly.\n
+comment1.params=theGame
+comment1.target=MinesweeperGUI(Minesweeper)
+comment1.text=\n\ Constructs\ the\ MinesweeperGUI\ with\ the\ given\ game\ instance.\n\ \n\ @param\ theGame\ The\ Minesweeper\ game\ instance.\n
+comment2.params=o\ arg
+comment2.target=void\ update(java.util.Observable,\ java.lang.Object)
+comment2.text=\n\ Updates\ the\ GUI\ when\ the\ observed\ object\ changes.\n\ \n\ @param\ o\ The\ observable\ object.\n\ @param\ arg\ An\ argument\ passed\ to\ the\ notifyObservers\ method.\n
+comment3.params=
+comment3.target=void\ restartGame()
+comment3.text=\n\ Restarts\ the\ game\ by\ resetting\ the\ game\ state\ and\ updating\ the\ UI.\n\ This\ method\ provides\ a\ convenient\ way\ to\ reset\ the\ game\ from\ other\ parts\ of\ the\ GUI.\n
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+comment4.text=\n\ The\ main\ method\ to\ start\ the\ Minesweeper\ game\ with\ a\ GUI.\n\ \n\ @param\ args\ Command-line\ arguments\ (not\ used).\n
+numComments=5

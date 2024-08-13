@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=SlotTest
+comment0.text=\n\ The\ test\ class\ SlotTest.\n\n\ @version\ 2.0\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\ (Called\ before\ every\ test\ case\ method.)\n
+comment2.params=
+comment2.target=void\ testSetAndGetState()
+comment2.text=\n\ UNIT-002\n\ Test\ set\ and\ get\ state\n\ Ensures\ that\ the\ state\ of\ the\ slot\ can\ be\ set\ and\ retrieved\ correctly.\n
+numComments=3

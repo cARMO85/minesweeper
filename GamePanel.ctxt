@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=GamePanel
+comment0.text=\n\ The\ GamePanel\ class\ represents\ the\ main\ game\ board\ of\ the\ GUI\ Minesweeper\ game.\n\ It\ handles\ the\ display\ and\ interaction\ of\ the\ game\ tiles.\n
+comment1.params=theGame\ flagMode\ controlPanel
+comment1.target=GamePanel(Minesweeper,\ boolean,\ ControlPanel)
+comment1.text=\n\ Constructs\ the\ GamePanel\ with\ the\ given\ game\ instance,\ flag\ mode,\ and\ control\ panel.\n\ \n\ @param\ theGame\ The\ Minesweeper\ game\ instance.\n\ @param\ flagMode\ The\ initial\ flag\ mode\ state.\n\ @param\ controlPanel\ The\ ControlPanel\ instance.\n
+comment2.params=flagMode
+comment2.target=void\ setFlagMode(boolean)
+comment2.text=\n\ Sets\ the\ flag\ mode\ state.\n\ \n\ @param\ flagMode\ The\ flag\ mode\ state\ to\ set.\n
+comment3.params=controlPanel
+comment3.target=void\ setControlPanel(ControlPanel)
+comment3.text=\n\ Sets\ the\ ControlPanel\ instance.\n\ \n\ @param\ controlPanel\ The\ ControlPanel\ instance\ to\ set.\n
+comment4.params=
+comment4.target=void\ updateBoard()
+comment4.text=\n\ Updates\ the\ display\ of\ the\ game\ board\ based\ on\ the\ game\ state.\n
+comment5.params=
+comment5.target=javax.swing.JButton[][]\ getButtons()
+comment5.text=\n\ Gets\ the\ buttons\ array.\n\ \n\ @return\ The\ buttons\ array.\n
+numComments=6

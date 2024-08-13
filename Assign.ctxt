@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Assign
+comment0.text=\n\ Assign\n\ This\ class\ handles\ the\ creation\ of\ all\ moves\ in\ the\ game.\n\ \n\ This\ class\ is\ responsible\ for\ assigning\ moves\ to\ the\ game\ board\ and\ \n\ maintaining\ the\ state\ of\ each\ move.\n\ \n\ @version\ 2.0\n\ @authors\ Lauren\ Scott,\ Paul\ Carmody\n
+comment1.params=game\ row\ col\ number
+comment1.target=Assign(Minesweeper,\ int,\ int,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ the\ Assign\ class.\n\ This\ initialises\ the\ game\ move\ assignment\ and\ sets\ the\ state\ of\ the\ slot\ being\ assigned.\n\ \n\ @param\ game\ \ \ The\ game\ instance\n\ @param\ row\ \ \ \ The\ row\ the\ user\ has\ selected\n\ @param\ col\ \ \ \ The\ column\ the\ user\ has\ selected\n\ @param\ number\ The\ state\ to\ be\ assigned\ to\ the\ slot\n
+comment2.params=number
+comment2.target=void\ assignMove(java.lang.String)
+comment2.text=\n\ Assigns\ the\ move\ to\ the\ game\ board.\n\ \n\ @param\ number\ The\ state\ to\ be\ assigned\ to\ the\ slot\n
+comment3.params=
+comment3.target=int\ getRow()
+comment3.text=\n\ Returns\ the\ current\ row\ value\ for\ this\ move.\n\ \n\ @return\ The\ row\ value\n
+comment4.params=
+comment4.target=int\ getCol()
+comment4.text=\n\ Returns\ the\ current\ column\ value\ for\ this\ move.\n\ \n\ @return\ The\ column\ value\n
+comment5.params=
+comment5.target=java.lang.String\ getState()
+comment5.text=\n\ Returns\ the\ state\ value\ for\ this\ move.\n\ \n\ @return\ The\ state\ value\n
+comment6.params=row\ col\ state
+comment6.target=void\ setState(int,\ int,\ java.lang.String)
+comment6.text=\n\ Sets\ the\ state\ of\ the\ slot\ at\ the\ specified\ row\ and\ column.\n\ \n\ @param\ row\ \ \ The\ row\ of\ the\ slot\n\ @param\ col\ \ \ The\ column\ of\ the\ slot\n\ @param\ state\ The\ state\ to\ set\n
+comment7.params=
+comment7.target=Slot[][]\ getBoard()
+comment7.text=\n\ Returns\ the\ entire\ game\ board.\n\ \n\ @return\ The\ game\ board\n
+numComments=8

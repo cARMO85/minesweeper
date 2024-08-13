@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=FileHandler
+comment0.text=\n\ The\ FileHandler\ class\ handles\ the\ saving\ and\ loading\ of\ game\ states\ for\ the\ Minesweeper\ game.\n\ \n\ @version\ 2.0\n
+comment1.params=theGame\ filename
+comment1.target=void\ saveGame(Minesweeper,\ java.lang.String)
+comment1.text=\n\ Saves\ the\ current\ game\ state\ to\ a\ specified\ file.\n\ \n\ @param\ theGame\ \ The\ current\ Minesweeper\ game\ instance.\n\ @param\ filename\ The\ name\ of\ the\ file\ to\ save\ the\ game\ state.\n
+comment2.params=theGame\ filename
+comment2.target=void\ loadGame(Minesweeper,\ java.lang.String)
+comment2.text=\n\ Loads\ a\ game\ state\ from\ a\ specified\ file.\n\ \n\ @param\ theGame\ \ The\ current\ Minesweeper\ game\ instance.\n\ @param\ filename\ The\ name\ of\ the\ file\ to\ load\ the\ game\ state\ from.\n
+numComments=3

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=MainApp
+comment0.text=\n\ The\ MainApp\ class\ serves\ as\ the\ entry\ point\ for\ the\ Minesweeper\ application.\n\ It\ allows\ users\ to\ select\ between\ a\ graphical\ user\ interface\ (GUI)\ and\ a\ text-based\ user\ interface\ (UI),\n\ or\ to\ exit\ the\ application.\n\ \n\ @version\ 2.0\n\ @author\ Paul\ Carmody\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ The\ main\ method\ to\ start\ the\ Minesweeper\ application.\n\ \n\ @param\ args\ Command-line\ arguments\ (not\ used).\n
+numComments=2

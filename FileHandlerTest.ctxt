@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=FileHandlerTest
+comment0.text=\n\ The\ test\ class\ FileHandlerTest.\n\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\ (Called\ before\ every\ test\ case\ method.)\n
+comment2.params=
+comment2.target=void\ testSaveGame()
+comment2.text=\n\ UNIT-026\n\ Test\ FileHandler\ saveGame\n\ Ensures\ that\ the\ game\ state\ is\ saved\ to\ a\ file\ correctly.\n
+comment3.params=
+comment3.target=void\ testLoadGame()
+comment3.text=\n\ UNIT-027\n\ Test\ FileHandler\ loadGame\n\ Ensures\ that\ the\ game\ state\ is\ loaded\ from\ a\ file\ correctly.\n
+numComments=4

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=GamePanelTest
+comment0.text=\n\ The\ test\ class\ GamePanelTest.\n\n\ @version\ 2.0\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\ (Called\ before\ every\ test\ case\ method.)\n
+comment2.params=
+comment2.target=void\ testButtonClickFlagMode()
+comment2.text=\n\ UNIT-028\n\ Test\ GamePanel\ button\ click\ in\ flag\ mode\n\ Ensures\ that\ clicking\ a\ button\ in\ flag\ mode\ updates\ the\ cell\ state\ to\ 'M'.\n
+numComments=3

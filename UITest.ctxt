@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=UITest
+comment0.text=\n\ The\ test\ class\ UITest.\n\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\ (Called\ before\ every\ test\ case\ method.)\n
+comment2.params=
+comment2.target=void\ testUndoMove()
+comment2.text=\n\ UNIT-015\n\ Test\ undo\ move\n\ Ensures\ that\ the\ last\ move\ made\ by\ the\ player\ can\ be\ undone\ correctly.\n
+comment3.params=
+comment3.target=void\ testClearMove()
+comment3.text=\n\ UNIT-016\n\ Test\ clear\ move\n\ Ensures\ that\ the\ game\ board\ is\ cleared\ and\ reset\ correctly.\n
+comment4.params=
+comment4.target=void\ testUIIntegrationWithMinesweeper()
+comment4.text=\n\ INTEGRATION-018\n\ Test\ UI\ integration\ with\ Minesweeper\n\ Ensures\ that\ the\ UI\ correctly\ updates\ and\ reflects\ the\ game\ state.\n
+comment5.params=
+comment5.target=void\ testPushCurrentStateToUndoStack()
+comment5.text=\n\ UNIT-030\n\ Test\ UI\ pushCurrentStateToUndoStack\n\ Ensures\ that\ the\ current\ state\ of\ the\ game\ is\ pushed\ to\ the\ undo\ stack\ correctly.\n
+numComments=6
